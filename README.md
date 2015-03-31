@@ -9,7 +9,7 @@ Redis for scaling elasticsearch indexing
 into equal fragments
 
 3. Then handover each such fragment (range) to a worker potentially running on a different node or in 
-the same node (unless we have some sane worker_per_node value). 
+the same node (unless we have some sane worker_per_node threshold). 
 
 4. The worker then makes a range query to the database, applies any necessary scope and invokes the `_bulk` API 
 endpoint of Elasticsearch.
